@@ -1,0 +1,22 @@
+application: palarinsrk
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /adminonly/.*
+  script: admin_only_handler.app
+  secure: always
+  login: admin
+ 
+- url: /.*
+  script: myapp.app
+  secure: always
+
+libraries:
+- name: pycrypto
+  version: latest
+
+inbound_services:
+- warmup

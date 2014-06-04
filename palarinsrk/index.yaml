@@ -1,0 +1,7 @@
+indexes:
+
+- kind: TransactionRequest
+  ancestor: no
+  properties:
+  - name: incoming_money_status
+  - name: remittance_status
